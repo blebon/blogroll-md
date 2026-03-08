@@ -1,0 +1,14 @@
+all: false
+log-level: info
+structname: '{{.Mock}}{{.InterfaceName}}'
+filename: 'mock_{{.InterfaceName}}.go'
+pkgname: '{{.SrcPackageName}}'
+recursive: false
+template: testify
+packages:
+  github.com/blebon/blogroll-md/internal/client:
+    config:
+      all: true
+  github.com/blebon/blogroll-md/internal/persistence:
+    config:
+      all: true

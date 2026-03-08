@@ -1,0 +1,10 @@
+# Build files
+build/
+
+# Example files
+example/mbl.db
+example/mauritian-blogs.md
+
+# IDE
+.vscode
+.zed
