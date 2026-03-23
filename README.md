@@ -13,7 +13,7 @@ docker run -v "$PWD":/src -w /src vektra/mockery:3
 ### Docker image
 
 ```bash
-docker build -t blogroll-md .
+docker build -t brunolebon/blogroll-md .
 ```
 
 ### Go
@@ -103,3 +103,15 @@ Controls the concurrency of feed fetching.
 | Field | Default | Description |
 |---|---|---|
 | `poolSizeMultiplier` | `4` | Worker pool size = `poolSizeMultiplier × NumCPU` |
+
+## Running
+
+### Docker image
+
+```bash
+docker run --rm \
+  -v "$(pwd)/example:/data" \
+  -w /data \
+  --user "$(id -u):$(id -g)" \
+  brunolebon/blogroll-md blogroll-md -input task.yml
+```
